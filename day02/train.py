@@ -10,12 +10,12 @@ from torch.utils.tensorboard import SummaryWriter
 from model import *
 
 # 准备数据集
-train_data = torchvision.datasets.CIFAR10(root="../dataset_chen",
+train_data = torchvision.datasets.CIFAR10(root="D:\PycharmProjects\day1\day02\dataset_chen",
                                          train=True,
                                          transform=torchvision.transforms.ToTensor(),
                                          download=True)
 
-test_data = torchvision.datasets.CIFAR10(root="../dataset_chen",
+test_data = torchvision.datasets.CIFAR10(root="D:\PycharmProjects\day1\day02\dataset_chen",
                                          train=False,
                                          transform=torchvision.transforms.ToTensor(),
                                          download=True )
@@ -48,7 +48,7 @@ total_test_step = 0 # 记录测试的次数
 epoch = 10 # 训练的轮数
 
 # 添加tensorboard
-writer = SummaryWriter("../logs_train")
+writer = SummaryWriter("logs_train")
 
 # 添加开始时间
 start_time = time.time()
